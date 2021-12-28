@@ -11,16 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48b33459-7cdd-4726-bf31-0edcac3c72b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Results.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ActivityLevelTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Macros.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MacrosTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MeasurementForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MeasurementForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Results.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Results.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +56,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640543396439</updated>
-      <workItem from="1640543397824" duration="8998000" />
+      <workItem from="1640543397824" duration="40189000" />
     </task>
     <servers />
   </component>
@@ -79,5 +79,17 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="680" y="254" width="559" height="606" key="#JavaScript/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1640544444243" />
+    <state x="920" y="167" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1640707903113">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="920" y="167" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1640707903113" />
+    <state x="1099" y="446" width="581" height="512" key="find.popup" timestamp="1640703898427">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="1099" y="446" width="581" height="512" key="find.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1640703898427" />
+    <state x="146" y="252" key="run.anything.popup" timestamp="1640704545804">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="146" y="252" key="run.anything.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1640704545804" />
   </component>
 </project>
