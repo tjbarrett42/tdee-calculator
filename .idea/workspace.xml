@@ -11,17 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48b33459-7cdd-4726-bf31-0edcac3c72b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ActivityLevelTable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Macros.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MacrosTable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AboutDialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ContactDialog.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Macros.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Macros.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MeasurementForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MeasurementForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Results.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Results.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,10 +36,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components" />
     </key>
@@ -56,7 +56,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640543396439</updated>
-      <workItem from="1640543397824" duration="40189000" />
+      <workItem from="1640543397824" duration="46021000" />
     </task>
     <servers />
   </component>
@@ -79,10 +79,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="680" y="254" width="559" height="606" key="#JavaScript/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1640544444243" />
-    <state x="920" y="167" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1640707903113">
+    <state x="920" y="167" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1640715209346">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="920" y="167" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1640707903113" />
+    <state x="920" y="167" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1640715209346" />
     <state x="1099" y="446" width="581" height="512" key="find.popup" timestamp="1640703898427">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

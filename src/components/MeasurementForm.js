@@ -60,7 +60,7 @@ const MeasurementForm = (props) => {
     return (
         <div>
             <Card>
-                <CardContent>
+                <CardContent >
                     <Typography variant="h5">
                         Measurements
                     </Typography>

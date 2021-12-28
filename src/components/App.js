@@ -25,15 +25,15 @@ const App = () => {
                 <Container>
                     <Paper elevation={24}>
                         <NavBar></NavBar>
-                        <Grid container spacing={2}>
-                            <Grid item xs={12} md={4}>
+                        <Grid item container spacing={0} >
+                            <Grid item xs={12} md={4} >
                                 <MeasurementForm onMeasurementsToApp={measurementsToResults}/>
                             </Grid>
                             <Grid item xs={12} md={8}>
                                 <Results measurements={submittedMeasurements} onCaloriesToApp={resultsToMacros}/>
                             </Grid>
                         </Grid>
-                        <Grid container spacing={2}>
+                        <Grid container spacing={0}>
                             <Grid item xs={12} md={12}>
                                 <Macros calories={calories}></Macros>
                             </Grid>

@@ -51,7 +51,6 @@ const Macros = (props) => {
     }
 
     return (
-        <div>
             <Card>
                 <CardContent>
                     <Typography variant="h5">
@@ -87,7 +86,6 @@ const Macros = (props) => {
 
                 </CardContent>
             </Card>
-        </div>
     )
 }
 
