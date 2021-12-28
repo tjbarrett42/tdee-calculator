@@ -38,13 +38,8 @@ const App = () => {
                                 <Macros calories={calories}></Macros>
                             </Grid>
                         </Grid>
-
-
                     </Paper>
-
-
                 </Container>
-
             </div>
         )
     } else {
@@ -60,7 +55,6 @@ const App = () => {
                         </Grid>
                     </Paper>
                 </Container>
-
             </div>
         )
     }
