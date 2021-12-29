@@ -11,24 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48b33459-7cdd-4726-bf31-0edcac3c72b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/fire-vector-icon-png-27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ActivityLevelTable.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/BMITable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Instructions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Macros.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MeasurementForm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Results.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AboutDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ActivityLevelTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ActivityLevelTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Macros.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Macros.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MeasurementForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MeasurementForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Results.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Results.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1640543396439</updated>
       <workItem from="1640543397824" duration="46685000" />
-      <workItem from="1640732314156" duration="18093000" />
+      <workItem from="1640732314156" duration="18503000" />
     </task>
     <servers />
   </component>

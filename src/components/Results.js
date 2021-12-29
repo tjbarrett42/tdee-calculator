@@ -20,6 +20,7 @@ const Results = (props) => {
     const l = props.measurements.activity;
     let mifflin = null;
     let mifflinActivityLevelAdjusted = null;
+    let bmi = null;
 
     if ( u === "metric") {
         mifflin = ((10*m + 6.25*h - 5*a) + s);
@@ -44,7 +45,13 @@ const Results = (props) => {
 
     mifflinActivityLevelAdjusted = Math.round(mifflinActivityLevelAdjusted);
 
-    const bmi = (m / ((h/100)*(h/100)));
+    if ( u === "metric") {
+        bmi = (m / ((h / 100) * (h / 100)));
+    } else {
+        const hImp = h*2.54;
+        const mImp = m*0.453592;
+        bmi = (mImp / ((hImp / 100) * (hImp / 100)));
+    }
 
     useEffect(()=>{
         props.onCaloriesToApp(mifflinActivityLevelAdjusted);
