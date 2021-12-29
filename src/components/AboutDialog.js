@@ -24,7 +24,7 @@ const AboutDialog = ({onClose, open}) => {
             scroll={'paper'}
 
         >
-            <DialogTitle>About the Caloric Expenditure Calculator</DialogTitle>
+            <DialogTitle>About the TDEE Calculator</DialogTitle>
             <DialogContent >
                 <DialogContentText
                     id="scroll-dialog-description"
@@ -34,7 +34,7 @@ const AboutDialog = ({onClose, open}) => {
                         Development
                     </Typography>
                     <Typography variant="body1">
-                        This calculator was inspired by and modeled after Rob and Jake's TDEE Calculator (tdeecalculator.net) as a side project for working on my skills with the React framework, with my personal interest in health and fitness being a large motivator.
+                        This Total Daily Expenditure Estimator calculator was inspired by and modeled after Rob and Jake's TDEE Calculator (tdeecalculator.net) as a side project for working on my skills with the React framework, with my personal interest in health and fitness being a large motivator.
                     </Typography>
                     <br/>
                     <Typography variant="h5">

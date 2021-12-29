@@ -6,17 +6,9 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
-import {FormControl, TextField} from "@mui/material";
-import MenuItem from "@mui/material/MenuItem";
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import MacrosTable from './MacrosTable';
 import Typography from "@mui/material/Typography";
+import Container from '@mui/material/Container';
 
 const Macros = (props) => {
     const [ macros, setMacros ] = useState("maintenance");
@@ -51,41 +43,47 @@ const Macros = (props) => {
     }
 
     return (
-            <Card>
-                <CardContent>
-                    <Typography variant="h5">
-                        Macronutrients
-                    </Typography>
-                    <TabContext value={macros}>
-                        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                            <TabList onChange={onMacrosChange} aria-label="lab API tabs example">
-                                <Tab label="Maintenance" value="maintenance" />
-                                <Tab label="Cutting" value="cutting" />
-                                <Tab label="Bulking" value="bulking" />
-                            </TabList>
-                        </Box>
-                        <TabPanel value="maintenance">
-                            <Typography variant="body2">
-                                These macronutrient split options are representative of your maintenance calories of {props.calories} calories per day.
-                            </Typography>
-                            <MacrosTable macros={maintenanceMacros}/>
-                        </TabPanel>
-                        <TabPanel value="cutting">
-                            <Typography variant="body2">
-                                These macronutrient split options are representative of your cutting calories (500 calorie deficit) of {props.calories-500} calories per day.
-                            </Typography>
-                            <MacrosTable macros={cuttingMacros}/>
-                        </TabPanel>
-                        <TabPanel value="bulking">
-                            <Typography variant="body2">
-                                These macronutrient split options are representative of your bulking calories (500 calorie surplus) of {props.calories+500} calories per day.
-                            </Typography>
-                            <MacrosTable macros={bulkingMacros}/>
-                        </TabPanel>
-                    </TabContext>
-
-                </CardContent>
-            </Card>
+        <Container>
+                <Typography variant="h5">
+                    Macronutrients
+                </Typography>
+                <TabContext value={macros}>
+                    <Box className="tabs" sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                        <TabList className="tabs" onChange={onMacrosChange} aria-label="lab API tabs example">
+                            <Tab className="tabs" label="Maintenance" value="maintenance" />
+                            <Tab className="tabs" label="Cutting" value="cutting" />
+                            <Tab className="tabs" label="Bulking" value="bulking" />
+                        </TabList>
+                    </Box>
+                    <TabPanel value="maintenance">
+                        <Typography variant="body2">
+                            These macronutrient split options are representative of your maintenance calories of <strong>{Number(props.calories).toLocaleString()} calories per day</strong>.
+                        </Typography>
+                        <MacrosTable macros={maintenanceMacros}/>
+                        <Typography variant="subtitle2">
+                            30/35/35 means 30% calories by Protein, 35% by fat, 35% by carbs. There are 4 calories per gram of protein and carbs, 9 calories per gram of fat.
+                        </Typography>
+                    </TabPanel>
+                    <TabPanel value="cutting">
+                        <Typography variant="body2">
+                            These macronutrient split options are representative of your cutting calories (500 calorie deficit) of <strong>{Number(props.calories-500).toLocaleString()} calories per day</strong>.
+                        </Typography>
+                        <MacrosTable macros={cuttingMacros}/>
+                        <Typography variant="subtitle2">
+                            30/35/35 means 30% calories by Protein, 35% by fat, 35% by carbs. There are 4 calories per gram of protein and carbs, 9 calories per gram of fat.
+                        </Typography>
+                    </TabPanel>
+                    <TabPanel value="bulking">
+                        <Typography variant="body2">
+                            These macronutrient split options are representative of your bulking calories (500 calorie surplus) of <strong>{Number(props.calories+500).toLocaleString()} calories per day</strong>.
+                        </Typography>
+                        <MacrosTable macros={bulkingMacros}/>
+                        <Typography variant="subtitle2">
+                            30/35/35 means 30% calories by Protein, 35% by fat, 35% by carbs. There are 4 calories per gram of protein and carbs, 9 calories per gram of fat.
+                        </Typography>
+                    </TabPanel>
+                </TabContext>
+        </Container>
     )
 }
 

@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from "@mui/material/Typography";
 import ActivityLevelTable from "./ActivityLevelTable";
+import Grid from "@mui/material/Grid";
+import './Results.css';
+import Box from "@mui/material/Box";
+import Container from '@mui/material/Container';
+import BMITable from "./BMITable";
 
 const Results = (props) => {
+    const activityLevels = ['basal', 'sedentary', 'light exercise', 'moderate exercise', 'heavy exercise', 'athlete'];
+
     const h = props.measurements.height; //Height in cm
     const a = props.measurements.age; //Age in years
     const m = props.measurements.weight; //Weight in kg
@@ -19,7 +26,6 @@ const Results = (props) => {
     } else {
         mifflin = ((10*m*0.453592 + 6.25*h*2.54 - 5*a) + s);
     }
-
     mifflinActivityLevelAdjusted = mifflin;
 
     if (l > 0) {
@@ -38,31 +44,55 @@ const Results = (props) => {
 
     mifflinActivityLevelAdjusted = Math.round(mifflinActivityLevelAdjusted);
 
-    props.onCaloriesToApp(mifflinActivityLevelAdjusted);
+    const bmi = (m / ((h/100)*(h/100)));
+
+    useEffect(()=>{
+        props.onCaloriesToApp(mifflinActivityLevelAdjusted);
+    }, [props.measurements])
 
     return (
-        <Card>
-            <CardContent>
-                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    Maintenance Calories:
+        <Container className="results-container">
+                <Typography className="results-title" variant="h5">
+                    Results
                 </Typography>
-                <Typography variant="h5" component="div">
-                    {mifflinActivityLevelAdjusted} calories per day
-                </Typography>
-                <Typography variant="h5" component="div">
-                    {mifflinActivityLevelAdjusted * 7} calories per week
-                </Typography>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    Not fat % adjusted
-                </Typography>
-                <Typography variant="body2">
-                    Basal metabolic rate (BMR) is the rate of energy expenditure per unit time by endothermic animals at rest.
-                </Typography>
-                <ActivityLevelTable mifflinArray={mifflinActivityArray} activity={props.measurements.activity}>
+                <Box sx={{ borderTop: 1, borderColor: 'divider' , height: 20}}/>
+                <Grid container>
+                    <Grid item xs={12} md={12} lg={12}>
+                        <Container >
+                        <Card className="results-card">
+                            <CardContent>
+                                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                                    Maintenance calories at {activityLevels[props.measurements.activity]} activity level:
+                                </Typography>
+                                <Typography variant="h5" component="div">
+                                    <strong>{Number(mifflinActivityLevelAdjusted).toLocaleString()} calories per day</strong>
+                                </Typography>
+                                <Typography variant="h5" component="div">
+                                    {Number(mifflinActivityLevelAdjusted * 7).toLocaleString()} calories per week
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                        </Container>
 
-                </ActivityLevelTable>
-            </CardContent>
-        </Card>
+                    </Grid>
+                    <Grid item xs={12} md={12} lg={6}>
+                        <Container className="table-desc">
+                            <Typography variant="body2">
+                                Your maintenance calories will vary at these activity levels:
+                            </Typography>
+                        </Container>
+                        <ActivityLevelTable mifflinArray={mifflinActivityArray} activity={props.measurements.activity}/>
+                    </Grid>
+                    <Grid item xs={12} md={12} lg={6}>
+                        <Container className="table-desc">
+                            <Typography variant="body2">
+                                Your Body Mass Index (BMI) is: <strong>{Math.round(bmi * 100)/100}</strong>.
+                            </Typography>
+                        </Container>
+                        <BMITable/>
+                    </Grid>
+                </Grid>
+        </Container>
     )
 }
 

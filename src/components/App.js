@@ -6,6 +6,9 @@ import Container from '@mui/material/Container';
 import NavBar from "./NavBar";
 import Grid from "@mui/material/Grid";
 import Macros from "./Macros";
+import Footer from "./Footer";
+import {Typography} from "@mui/material";
+import './App.css';
 
 const App = () => {
     const [ submittedMeasurements, setSubmittedMeasurements ] = useState({});
@@ -40,6 +43,7 @@ const App = () => {
                         </Grid>
                     </Paper>
                 </Container>
+                <Footer></Footer>
             </div>
         )
     } else {
@@ -48,13 +52,23 @@ const App = () => {
                 <Container>
                     <Paper elevation={24}>
                         <NavBar></NavBar>
-                        <Grid container  spacing={2}>
-                            <Grid item xs={12} md={4}>
-                                <MeasurementForm onMeasurementsToApp={measurementsToResults}/>
+                            <Grid container spacing={0}>
+                                <Grid item xs={12} md={4}>
+                                    <MeasurementForm onMeasurementsToApp={measurementsToResults}/>
+                                </Grid>
+                                <Grid className="app-intro-grid" item xs={12} md={8}>
+                                    <Typography variant="h4">
+                                        Welcome to the Total Daily Expenditure Estimator (TDEE)!
+                                    </Typography>
+                                    <Typography variant="h5">
+                                        Calculate your basal metabolic rate, body mass index, and macronutrient splits for maintenance, cutting, and bulking.
+                                    </Typography>
+                                </Grid>
                             </Grid>
-                        </Grid>
+
                     </Paper>
                 </Container>
+                <Footer></Footer>
             </div>
         )
     }

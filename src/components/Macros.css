@@ -1,0 +1,8 @@
+.macros-container {
+    padding: 20px;
+}
+
+.tabs {
+    min-height: 30px; !important
+    height: 30px; !important
+}

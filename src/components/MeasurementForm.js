@@ -13,6 +13,8 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import 'flexmonster/flexmonster.css';
 import Typography from "@mui/material/Typography";
+import Container from '@mui/material/Container';
+import './MeasurementForm.css';
 
 const MeasurementForm = (props) => {
     const [ values, setValues ] = useState({ gender: '', age: '', weight: '', height: '', activity: '', units: "metric"});
@@ -59,16 +61,15 @@ const MeasurementForm = (props) => {
 
     return (
         <div>
-            <Card>
-                <CardContent >
+            <Container className="measurement-form-container">
                     <Typography variant="h5">
                         Measurements
                     </Typography>
-                    <TabContext value={values.units}>
-                        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                            <TabList onChange={handleUnitsChange} aria-label="lab API tabs example">
-                                <Tab label="Metric" value="metric" />
-                                <Tab label="Imperial" value="imperial" />
+                    <TabContext  value={values.units}>
+                        <Box className="tabs" sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                            <TabList className="tabs" onChange={handleUnitsChange} aria-label="lab API tabs example">
+                                <Tab className="tabs" label="Metric" value="metric" />
+                                <Tab className="tabs" label="Imperial" value="imperial" />
                             </TabList>
                         </Box>
                         <TabPanel value="metric">
@@ -200,11 +201,10 @@ const MeasurementForm = (props) => {
                             </FormControl>
                         </TabPanel>
                     </TabContext>
-                    <Button fullWidth="true" variant="contained" onClick={calculate}>
+                    <Button fullWidth={true} variant="contained" onClick={calculate}>
                         Calculate Caloric Expenditure
                     </Button>
-                </CardContent>
-            </Card>
+            </Container>
             <Snackbar open={snackBar} autoHideDuration={6000} onClose={handleCloseSnackBar}>
                 <Alert onClose={handleCloseSnackBar} severity="error" sx={{ width: '100%' }}>
                     Please fill out the values

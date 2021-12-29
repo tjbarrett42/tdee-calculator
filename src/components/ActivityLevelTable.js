@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import {create} from "@mui/material/styles/createTransitions";
+import './ActivityLevelTable.css';
 
 const ActivityLevelTable = ({activity, mifflinArray}) => {
     const [ rows, setRows ] = useState([]);
@@ -17,12 +18,12 @@ const ActivityLevelTable = ({activity, mifflinArray}) => {
 
     useEffect(()=>{
         setRows([
-            createData('Basal Metabolic Rate', mifflinArray[0]+' calories per day'),
-            createData('Sedentary', mifflinArray[1]+' calories per day'),
-            createData('Light Exercise', mifflinArray[2]+' calories per day'),
-            createData('Moderate Exercise', mifflinArray[3]+' calories per day'),
-            createData('Heavy Exercise', mifflinArray[4]+' calories per day'),
-            createData('Athlete', mifflinArray[5]+' calories per day')
+            createData('Basal Metabolic Rate', mifflinArray[0]),
+            createData('Sedentary', mifflinArray[1]),
+            createData('Light Exercise', mifflinArray[2]),
+            createData('Moderate Exercise', mifflinArray[3]),
+            createData('Heavy Exercise', mifflinArray[4]),
+            createData('Athlete', mifflinArray[5])
         ]);
     }, mifflinArray)
 
@@ -31,11 +32,11 @@ const ActivityLevelTable = ({activity, mifflinArray}) => {
 
     return (
             <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 300 }} aria-label="simple table">
+                <Table sx={{ minWidth: 300 }} aria-label="Activity Levels" size="small">
                     <TableHead>
                         <TableRow>
                             <TableCell>Activity Level</TableCell>
-                            <TableCell align="right">Calories</TableCell>
+                            <TableCell align="right">Calories Per Day</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -45,9 +46,9 @@ const ActivityLevelTable = ({activity, mifflinArray}) => {
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             >
                                 <TableCell component="th" scope="row">
-                                    {row.activityLevel}
+                                        {row.activityLevel}
                                 </TableCell>
-                                <TableCell align="right">{row.calories}</TableCell>
+                                <TableCell align="right">{Number(row.calories).toLocaleString()}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
