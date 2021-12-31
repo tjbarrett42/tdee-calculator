@@ -1,11 +1,4 @@
 import React, {useState} from 'react';
-import Box from '@mui/material/Box';
-import Tab from '@mui/material/Tab';
-import TabContext from '@mui/lab/TabContext';
-import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
-import {FormControl, TextField} from "@mui/material";
-import MenuItem from "@mui/material/MenuItem";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -14,13 +7,14 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-
+/* receives three dimensional arrays for building out responsive tables */
 const MacrosTable = ({macros}) => {
 
     function createData(name, modCarb, lowCarb, highCarb) {
         return { name, modCarb, lowCarb, highCarb };
     }
 
+    /* Calories and grams stored on deepest array (0 and 1), might be better way to code this representation but is readable */
     const rows = [
         createData('Protein', macros[0][0][1]+'g ('+macros[0][0][0]+' calories)', macros[1][0][1]+'g ('+macros[1][0][0]+' calories)', macros[2][0][1]+'g ('+macros[2][0][0]+' calories)'),
         createData('Fat', macros[0][1][1]+'g ('+macros[0][1][0]+' calories)', macros[1][1][1]+'g ('+macros[1][1][0]+' calories)', macros[2][1][1]+'g ('+macros[2][1][0]+' calories)'),

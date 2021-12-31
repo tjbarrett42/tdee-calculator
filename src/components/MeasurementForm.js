@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import { TextField, Select, Button, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
+import { TextField, Button, FormControl } from '@mui/material';
 import MenuItem from "@mui/material/MenuItem";
 import Snackbar from "@mui/material/Snackbar";
-import SnackbarContent from "@mui/material/SnackbarContent";
 import Alert from "@mui/material/Alert";
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
@@ -16,6 +13,7 @@ import Typography from "@mui/material/Typography";
 import Container from '@mui/material/Container';
 import './MeasurementForm.css';
 
+/* Input component. Takes user's details to create maintenance calories value and BMI statistics. */
 const MeasurementForm = (props) => {
     const [ values, setValues ] = useState({ gender: '', age: '', weight: '', height: '', activity: '', units: "metric"});
     const [ snackBar, setSnackBar ] = useState(false);

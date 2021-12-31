@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
@@ -10,6 +8,7 @@ import MacrosTable from './MacrosTable';
 import Typography from "@mui/material/Typography";
 import Container from '@mui/material/Container';
 
+/* Macros parent component. Contains state of current macros shown in tabs */
 const Macros = (props) => {
     const [ macros, setMacros ] = useState("maintenance");
 
@@ -25,6 +24,7 @@ const Macros = (props) => {
         return Math.round(num);
     }
 
+    /* Three dimensional array to contain macro information, cleanest way to reuse code for bulking and cutting*/
     function calculateMacros(calories) {
         // Moderate carb 30/35/35
         let macrosArray = [];

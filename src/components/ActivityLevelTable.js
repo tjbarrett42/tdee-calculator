@@ -6,9 +6,10 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import {create} from "@mui/material/styles/createTransitions";
 import './ActivityLevelTable.css';
 
+/* Draw table of activity levels with respective calorie requirements. */
+/* TODO: Bold/highlight currently selected activity level. This will require refactoring the row mapping to take place outside render() */
 const ActivityLevelTable = ({activity, mifflinArray}) => {
     const [ rows, setRows ] = useState([]);
 
@@ -16,6 +17,7 @@ const ActivityLevelTable = ({activity, mifflinArray}) => {
         return { activityLevel, calories };
     }
 
+    /* Populate table only after the mifflinArray is provided */
     useEffect(()=>{
         setRows([
             createData('Basal Metabolic Rate', mifflinArray[0]),
@@ -26,9 +28,6 @@ const ActivityLevelTable = ({activity, mifflinArray}) => {
             createData('Athlete', mifflinArray[5])
         ]);
     }, mifflinArray)
-
-
-
 
     return (
             <TableContainer component={Paper}>

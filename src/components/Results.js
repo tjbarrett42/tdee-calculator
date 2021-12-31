@@ -9,15 +9,16 @@ import Box from "@mui/material/Box";
 import Container from '@mui/material/Container';
 import BMITable from "./BMITable";
 
+/* Main math component. Calculates mifflin equation, BMI equation, and considers metric and imperial entries accordingly */
 const Results = (props) => {
     const activityLevels = ['basal', 'sedentary', 'light exercise', 'moderate exercise', 'heavy exercise', 'athlete'];
-
     const h = props.measurements.height; //Height in cm
     const a = props.measurements.age; //Age in years
     const m = props.measurements.weight; //Weight in kg
     const s = (props.measurements.gender === "male") ? 5 : -151; // Gender variable
     const u = props.measurements.units;
     const l = props.measurements.activity;
+
     let mifflin = null;
     let mifflinActivityLevelAdjusted = null;
     let bmi = null;

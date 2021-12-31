@@ -11,6 +11,7 @@ import {Typography} from "@mui/material";
 import './App.css';
 
 const App = () => {
+    /* Measurements state obtained by MeasurementsForm component and calories state updated by Results, sent to Macros */
     const [ submittedMeasurements, setSubmittedMeasurements ] = useState({});
     const [ calories, setCalories ] = useState('');
 
@@ -22,6 +23,7 @@ const App = () => {
         setCalories(calories);
     }
 
+    /* Render Results/Macros components only when submitted at least once, dive screen otherwise */
     if (Object.keys(submittedMeasurements).length !== 0){
         return (
             <div>

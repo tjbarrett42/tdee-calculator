@@ -7,6 +7,7 @@ import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
 import TableBody from "@mui/material/TableBody";
 
+/* Static table build to create BMI table, but used state for future update in making BMI table responsive current classification bolded */
 const BMITable = () => {
     const [ rows, setRows ] = useState([]);
 
